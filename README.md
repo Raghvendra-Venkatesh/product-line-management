@@ -33,11 +33,15 @@ Ensure you have the following installed on your machine:
 - **MongoDB**: A local instance or a MongoDB Atlas connection URI
 - **Git**
 
+
+## 🌐 Live Demo
+👉 https://product-line-management-zeta.vercel.app/
+
 ### Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/Raghvendra-Venkatesh/product-line-management.git
    cd "Product Line Management"
    ```
 
@@ -103,6 +107,3 @@ Product Line Management/
 │
 └── .gitignore                 # Files/folders to be ignored by Git
 ```
-
-## 📄 License
-This project is licensed under the ISC License.
