@@ -23,7 +23,10 @@ const Signup = ({ setUser }) => {
             navigate('/');
         } catch (err) {
             console.error('Signup error:', err);
-            alert(err.response?.data?.message || 'Access registration failed.');
+            const msg = err.response?.data?.message
+                || err.response?.data?.error
+                || (err.response ? `Server error ${err.response.status}` : 'Cannot reach server. Backend may be starting up — wait 30s and try again.');
+            alert(msg);
         } finally {
             setLoading(false);
         }
