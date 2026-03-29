@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #58a6ff;
+  --secondary: #238636;
+  --accent: #f97316;
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --border: #30363d;
+  --sidebar-bg: #010409;
+  --text-main: #c9d1d9;
+  --text-dim: #8b949e;
+  --success: #3fb950;
+  --danger: #f85149;
+  --nav-active: #1f6feb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* EventScan Style Header Nav */
+.top-nav {
+  height: 64px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-pill {
+  padding: 8px 16px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.nav-pill:hover {
+  color: #fff;
+}
+
+.nav-pill.active {
+  color: #fff;
+  border-color: var(--primary);
+  background: rgba(88, 166, 255, 0.1);
+}
+
+/* Stat Cards Row */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Dashboard Content Grid */
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.widget-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.widget-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* Progress Breakdown Items */
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.breakdown-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 20px;
+  align-items: center;
+  gap: 16px;
+}
+
+.breakdown-label {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.progress-track {
+  height: 8px;
+  background: #111;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 100px;
+}
+
+.breakdown-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+/* Activity Feed Items */
+.feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feed-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.feed-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.feed-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.feed-user {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.feed-action {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.feed-time {
+  font-size: 11px;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* Standard Table in Slate Theme */
+.slate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.slate-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+}
+
+.slate-table td {
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Forms in Slate Theme */
+.slate-input {
+  background: #010409;
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.slate-btn {
+  background: #238636;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
