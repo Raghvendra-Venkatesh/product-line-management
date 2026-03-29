@@ -5,22 +5,9 @@ require("dotenv").config();
 
 const app = express();
 
-// =======================
-// Middleware
-// =======================
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'http://localhost:5173',
-  'http://localhost:3000',
-].filter(Boolean);
-
+// Simple, permissive CORS to bypass the block for now
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (e.g. curl, Postman)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) return callback(null, true);
-    return callback(new Error(`CORS blocked: ${origin}`));
-  },
+  origin: true, // Allows any origin
   credentials: true,
 }));
 app.use(express.json());
